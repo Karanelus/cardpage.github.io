@@ -51,7 +51,7 @@ body .CardConteiner {
   left: 15%;
   position: absolute;
   top: 25%;
-  width: 447px;
+  width: 28rem;
 }
 
 .cardFrontNumber {
@@ -82,7 +82,7 @@ body .CardConteiner {
   left: 30%;
   position: absolute;
   top: 50%;
-  width: 447px;
+  width: 28rem;
 }
 
 .cardHolderInfo--CVC {
@@ -308,7 +308,7 @@ button.CardDataAccept {
     left: 5%;
     position: absolute;
     top: 50%;
-    width: calc(447px / 1.5);
+    width: 20rem;
     z-index: 1;
   }
 
@@ -323,7 +323,7 @@ button.CardDataAccept {
     left: 20%;
     position: absolute;
     top: 25%;
-    width: calc(447px / 1.5);
+    width: 20rem;
   }
 
   .cardFrontNumber {
