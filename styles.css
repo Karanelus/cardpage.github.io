@@ -20,7 +20,7 @@
 }
 
 body {
-  background: url("images/bg-main-desktop.png") no-repeat 0 0;
+  background: url("./images/bg-main-desktop.png") no-repeat 0 0;
   background-size: 25vw 100vh;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -43,7 +43,7 @@ body .CardConteiner {
 
 .CardsPosition .cardFrontSite {
   aspect-ratio: 447/245;
-  background: url("images/bg-card-front.png") no-repeat;
+  background: url("./images/bg-card-front.png") no-repeat;
   background-size: 100% 100%;
   color: var(--White);
   display: flex;
@@ -76,7 +76,7 @@ body .CardConteiner {
 
 .CardsPosition .cardBackSite {
   aspect-ratio: 447/245;
-  background: url("images/bg-card-back.png") no-repeat;
+  background: url("./images/bg-card-back.png") no-repeat;
   background-size: 100% 100%;
   color: var(--White);
   left: 30%;
@@ -287,7 +287,7 @@ button.CardDataAccept {
 
 @media screen and (max-width: 480px) {
   body {
-    background: url("images/bg-main-mobile.png") no-repeat 0 0;
+    background: url("./images/bg-main-mobile.png") no-repeat 0 0;
     background-size: 100vw 40vh;
     overflow: hidden;
   }
@@ -302,7 +302,7 @@ button.CardDataAccept {
   }
 
   .CardsPosition .cardFrontSite {
-    background: url("images/bg-card-front.png") no-repeat;
+    background: url("./images/bg-card-front.png") no-repeat;
     background-size: 100% 100%;
     color: var(--White);
     left: 5%;
@@ -317,7 +317,7 @@ button.CardDataAccept {
   }
 
   .CardsPosition .cardBackSite {
-    background: url("images/bg-card-back.png") no-repeat;
+    background: url("./images/bg-card-back.png") no-repeat;
     background-size: 100% 100%;
     color: var(--White);
     left: 20%;
