@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Interactive card details form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./scripts.js"></script>
+  </head>
+  <body>
+    <div class="CardConteiner">
+      <section class="CardsPosition">
+        <div class="cardFrontSite">
+          <div class="CardLogo">
+            <svg
+              width="84"
+              height="47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="23.478"
+                cy="23.5"
+                rx="23.478"
+                ry="23.5"
+                fill="#fff"
+              />
+              <path
+                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                stroke="#fff"
+              />
+            </svg>
+          </div>
+          <span class="cardFrontNumber">0000 0000 0000 0000</span>
+          <span class="cardHolderInfo"
+            ><span class="cardHolderInfo--Name">JANE APPLESEED</span>
+            <span class="cardHolderInfo--DateOfExpired"
+              ><span id="CardMounthRender">01</span>/<span id="CardYearRender"
+                >22</span
+              ></span
+            ></span
+          >
+        </div>
+        <div class="cardBackSite">
+          <div class="cardHolderInfo--CVC">000</div>
+        </div>
+      </section>
+      <section class="CardData">
+        <label for="CardholderName" data-CardnameSet>Cardholder Name</label
+        ><input
+          id="CardholderName"
+          class="CardData--CardholderName"
+          type="text"
+          placeholder="Jane Appleseed"
+        />
+        <label for="CardNumber" data-CardnumberSet>Card Number</label
+        ><input
+          id="CardNumber"
+          class="CardData--CardNumber"
+          type="text"
+          placeholder="1234 5678 9123 0000"
+        />
+        <div class="CardLastLine">
+          <div>
+            <label for="CardExpMounth CardExpYear" data-CardexpiredataSet
+              >Exp. Date (MM/YY)</label
+            >
+            <span>
+              <input
+                id="CardExpMounth"
+                class="CardData--CardExpMounth"
+                type="number"
+                min="1"
+                max="12"
+                placeholder="MM"
+              />
+              <input
+                id="CardExpYear"
+                class="CardData--CardExpYear"
+                type="number"
+                min="22"
+                max="50"
+                placeholder="YY"
+              />
+            </span>
+          </div>
+          <div>
+            <label for="CVC" data-CardCVCSet>CVC</label>
+            <input
+              id="CVC"
+              class="CardData--CVC"
+              type="number"
+              maxlength="3"
+              placeholder="e.g. 123"
+            />
+          </div>
+        </div>
+        <button type="submit" id="confirm" class="CardDataAccept">
+          Confirm
+        </button>
+      </section>
+      <!-- Completed state start -->
+      <section class="CardOperationAccepted hidden">
+        <div class="CardOperationComplite">
+          <svg
+            width="80"
+            height="80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient
+                id="a"
+                x1="-23.014"
+                y1="11.507"
+                x2="0"
+                y2="91.507"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="CardOperationAcceptedAppritiating">Thank you!</div>
+        <div class="CardOperationAcceptedText">
+          We've added your card details
+        </div>
+        <button id="continue" type="submit" class="CardDataAccept">
+          Continue
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

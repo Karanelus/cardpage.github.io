@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Linear_gradient: #600594;
+  --Red: #ff5252;
+  --White: #ffffff;
+  --Light_grayish_violet: #dedddf;
+  --Dark_grayish_violet: #8e8593;
+  --Very_dark_violet: #21092f;
+  --Black: #000000;
+}
+
+body {
+  background: url("images/bg-main-desktop.png") no-repeat 0 0;
+  background-size: 25vw 100vh;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+body .CardConteiner {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.CardsPosition {
+  padding: 30px;
+  position: relative;
+  width: 50%;
+}
+
+.CardsPosition .cardFrontSite {
+  aspect-ratio: 447/245;
+  background: url("images/bg-card-front.png") no-repeat;
+  background-size: 100% 100%;
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  left: 15%;
+  position: absolute;
+  top: 25%;
+  width: 447px;
+}
+
+.cardFrontNumber {
+  letter-spacing: 3px;
+}
+
+.CardLogo {
+  padding: 15px 0 50px 10px;
+}
+
+.cardFrontNumber {
+  font-size: 30px;
+  padding: 0 25px;
+}
+
+.cardHolderInfo {
+  display: flex;
+  margin-top: 30px;
+  padding: 0 25px;
+  justify-content: space-between;
+}
+
+.CardsPosition .cardBackSite {
+  aspect-ratio: 447/245;
+  background: url("images/bg-card-back.png") no-repeat;
+  background-size: 100% 100%;
+  color: var(--White);
+  left: 30%;
+  position: absolute;
+  top: 50%;
+  width: 447px;
+}
+
+.cardHolderInfo--CVC {
+  position: absolute;
+  top: 45%;
+  left: 80%;
+}
+
+body .CardData {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .CardData label {
+  text-transform: uppercase;
+  padding: 5px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+body .CardData input {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  padding: 7px;
+}
+
+label[for="CardholderName"]::after {
+  content: attr(data-CardnameSet);
+  color: var(--Red);
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  margin: 4rem 0 0 -6rem;
+}
+
+label[for="CardNumber"]::after {
+  content: attr(data-CardnumberSet);
+  color: var(--Red);
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  margin: 4rem 0 0 -7.5rem;
+}
+
+label[for="CardExpMounth CardExpYear"]::after {
+  content: attr(data-CardexpiredataSet);
+  color: var(--Red);
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  margin: 4.3rem 0 0 0.4rem;
+}
+
+label[for="CVC"]::after {
+  content: attr(data-CardCVCSet);
+  color: var(--Red);
+  display: block;
+  font-size: 10px;
+  position: absolute;
+  margin: 4.3rem 0 0 0.4rem;
+}
+
+body .CardData input[class="CardData--CardholderName"],
+body .CardData input[class="CardData--CardNumber"] {
+  border: 1px solid var(--Dark_grayish_violet);
+  border-radius: 7px;
+  color: var(--Black);
+  cursor: text;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0 0 30px;
+  max-width: 400px;
+  outline: none;
+  position: relative;
+}
+
+body .CardData input[class="CardData--CardholderName"]::placeholder,
+body .CardData input[class="CardData--CardNumber"]::placeholder {
+  color: var(--Dark_grayish_violet);
+}
+
+body .CardData input[class="CardData--CardExpMounth"],
+body .CardData input[class="CardData--CardExpYear"] {
+  border: 1px solid var(--Dark_grayish_violet);
+  border-radius: 7px;
+  color: var(--Black);
+  cursor: text;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 5px;
+  max-width: 100px;
+  outline: none;
+}
+
+body .CardData input[class="CardData--CardExpMounth"]::placeholder,
+body .CardData input[class="CardData--CardExpYear"]::placeholder {
+  color: var(--Dark_grayish_violet);
+}
+
+body .CardData input[class="CardData--CVC"] {
+  border: 1px solid var(--Dark_grayish_violet);
+  border-radius: 7px;
+  color: var(--Black);
+  cursor: text;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 5px;
+  max-width: 190px;
+  outline: none;
+}
+
+body .CardData input[class="CardData--CVC"]::placeholder {
+  color: var(--Dark_grayish_violet);
+}
+
+body .CardData input[class="CardData--CardholderName"]:active,
+body .CardData input[class="CardData--CardholderName"]:focus,
+body .CardData input[class="CardData--CardNumber"]:active,
+body .CardData input[class="CardData--CardNumber"]:focus,
+body .CardData input[class="CardData--CVC"]:active,
+body .CardData input[class="CardData--CVC"]:focus,
+body .CardData input[class="CardData--CardExpYear"]:active,
+body .CardData input[class="CardData--CardExpYear"]:focus,
+body .CardData input[class="CardData--CardExpMounth"]:active,
+body .CardData input[class="CardData--CardExpMounth"]:focus {
+  outline: 1px solid var(--Linear_gradient);
+}
+
+label[data-cardnameset="WRONG SYMBOL, LATINS ONLY"]
+  + input[class="CardData--CardholderName"],
+label[data-cardnameset="CAN'T BE BLANK"]
+  + input[class="CardData--CardholderName"],
+label[data-CardnumberSet="wrong symbols, only numbers"]
+  + input[class="CardData--CardNumber"],
+label[data-cardnumberset="NEED TO BE 16 NUMBERS"]
+  + input[class="CardData--CardNumber"],
+label[data-CardnumberSet="CAN'T BE BLANK"]
+  + input[class="CardData--CardNumber"],
+label[data-cardcvcset="Can't be blank"] + input[class="CardData--CVC"],
+label[data-cardcvcset="3 numbers need"] + input[class="CardData--CVC"],
+label[data-CardexpiredataSet="CAN'T BE BLANK"]
+  + span
+  input[class="CardData--CardExpMounth"],
+label[data-CardexpiredataSet="CAN'T BE BLANK"]
+  + span
+  input[class="CardData--CardExpYear"],
+label[data-CardexpiredataSet="wrong data, please check"]
+  + span
+  input[class="CardData--CardExpMounth"],
+label[data-CardexpiredataSet="wrong data, please check"]
+  + span
+  input[class="CardData--CardExpYear"] {
+  border: 1px solid var(--Red);
+}
+
+.CardLastLine {
+  display: flex;
+  flex-direction: row;
+}
+
+.CardLastLine div {
+  display: flex;
+  flex-direction: column;
+}
+
+button.CardDataAccept {
+  border-radius: 7px;
+  background: var(--Very_dark_violet);
+  color: var(--White);
+  cursor: pointer;
+  font-size: 20px;
+  min-width: 400px;
+  min-height: 50px;
+  margin: 30px;
+}
+
+.CardOperationAccepted {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.CardOperationAccepted .CardOperationComplite {
+  margin: 30px;
+}
+
+.CardOperationAcceptedAppritiating {
+  font-size: 40px;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.CardOperationAccepted.hidden {
+  display: none;
+}
+
+.CardData.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background: url("images/bg-main-mobile.png") no-repeat 0 0;
+    background-size: 100vw 40vh;
+    overflow: hidden;
+  }
+
+  body .CardConteiner {
+    flex-direction: column;
+  }
+
+  .CardsPosition {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .CardsPosition .cardFrontSite {
+    background: url("images/bg-card-front.png") no-repeat;
+    background-size: 100% 100%;
+    color: var(--White);
+    left: 5%;
+    position: absolute;
+    top: 50%;
+    width: calc(447px / 1.5);
+    z-index: 1;
+  }
+
+  .CardLogo {
+    padding: 5px 0 5px 5px;
+  }
+
+  .CardsPosition .cardBackSite {
+    background: url("images/bg-card-back.png") no-repeat;
+    background-size: 100% 100%;
+    color: var(--White);
+    left: 20%;
+    position: absolute;
+    top: 25%;
+    width: calc(447px / 1.5);
+  }
+
+  .cardFrontNumber {
+    font-size: 1.1rem;
+  }
+
+  .cardHolderInfo--Name,
+  .cardHolderInfo--DateOfExpired {
+    font-size: 0.9rem;
+  }
+
+  .cardHolderInfo--CVC {
+    top: 42%;
+    left: 78%;
+  }
+
+  body .CardData {
+    width: 100%;
+    height: 60vh;
+  }
+
+  body .CardData input[class="CardData--CardholderName"],
+  body .CardData input[class="CardData--CardNumber"] {
+    max-width: 80vw;
+    font-size: 1.7rem;
+  }
+
+  .CardLastLine {
+    max-width: 80vw;
+  }
+
+  .CardLastLine label {
+    font-size: 15.3px;
+  }
+
+  body .CardData input[class="CardData--CardExpMounth"],
+  body .CardData input[class="CardData--CardExpYear"] {
+    max-width: 20vw;
+    font-size: 1.7rem;
+  }
+
+  body .CardData input[class="CardData--CVC"] {
+    max-width: 30vw;
+    font-size: 1.7rem;
+  }
+
+  button.CardDataAccept {
+    min-width: 80vw;
+  }
+
+  .CardOperationAccepted {
+    width: 100%;
+  }
+
+  label[for="CardholderName"]::after {
+    margin: 4rem 0 0 -4rem;
+  }
+
+  label[for="CardNumber"]::after {
+    margin: 4rem 0 0 -5.4rem;
+  }
+
+  label[for="CardExpMounth CardExpYear"]::after {
+    margin: 4.3rem 0 0 0;
+  }
+}
