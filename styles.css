@@ -290,6 +290,8 @@ button.CardDataAccept {
     background: url("./images/bg-main-mobile.png") no-repeat 0 0;
     background-size: 100vw 40vh;
     overflow: hidden;
+    min-height: 100vh;
+    overflow-y: hidden;
   }
 
   body .CardConteiner {
@@ -307,7 +309,7 @@ button.CardDataAccept {
     color: var(--White);
     left: 5%;
     position: absolute;
-    top: 50%;
+    top: 40%;
     width: 20rem;
     z-index: 1;
   }
@@ -320,9 +322,9 @@ button.CardDataAccept {
     background: url("./images/bg-card-back.png") no-repeat;
     background-size: 100% 100%;
     color: var(--White);
-    left: 20%;
+    left: 15%;
     position: absolute;
-    top: 25%;
+    top: 10%;
     width: 20rem;
   }
 
@@ -342,7 +344,8 @@ button.CardDataAccept {
 
   body .CardData {
     width: 100%;
-    height: 60vh;
+    margin-top: 3vh;
+    height: 57vh;
   }
 
   body .CardData input[class="CardData--CardholderName"],
