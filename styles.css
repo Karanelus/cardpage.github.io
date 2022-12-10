@@ -20,7 +20,7 @@
 }
 
 body {
-  background: url("images/bg-main-desktop.png") no-repeat 0 0;
+  background: url("./images/bg-main-desktop.png") no-repeat 0 0;
   background-size: 25vw 100vh;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -43,7 +43,7 @@ body .CardConteiner {
 
 .CardsPosition .cardFrontSite {
   aspect-ratio: 447/245;
-  background: url("images/bg-card-front.png") no-repeat;
+  background: url("./images/bg-card-front.png") no-repeat;
   background-size: 100% 100%;
   color: var(--White);
   display: flex;
@@ -51,7 +51,7 @@ body .CardConteiner {
   left: 15%;
   position: absolute;
   top: 25%;
-  width: 447px;
+  width: 28rem;
 }
 
 .cardFrontNumber {
@@ -76,13 +76,13 @@ body .CardConteiner {
 
 .CardsPosition .cardBackSite {
   aspect-ratio: 447/245;
-  background: url("images/bg-card-back.png") no-repeat;
+  background: url("./images/bg-card-back.png") no-repeat;
   background-size: 100% 100%;
   color: var(--White);
   left: 30%;
   position: absolute;
   top: 50%;
-  width: 447px;
+  width: 28rem;
 }
 
 .cardHolderInfo--CVC {
@@ -287,9 +287,10 @@ button.CardDataAccept {
 
 @media screen and (max-width: 480px) {
   body {
-    background: url("images/bg-main-mobile.png") no-repeat 0 0;
+    background: url("./images/bg-main-mobile.png") no-repeat 0 0;
     background-size: 100vw 40vh;
     overflow: hidden;
+    overflow-y: hidden;
   }
 
   body .CardConteiner {
@@ -298,17 +299,17 @@ button.CardDataAccept {
 
   .CardsPosition {
     width: 100%;
-    height: 40vh;
+    height: 400px;
   }
 
   .CardsPosition .cardFrontSite {
-    background: url("images/bg-card-front.png") no-repeat;
+    background: url("./images/bg-card-front.png") no-repeat;
     background-size: 100% 100%;
     color: var(--White);
     left: 5%;
     position: absolute;
-    top: 50%;
-    width: calc(447px / 1.5);
+    top: 40%;
+    width: 20rem;
     z-index: 1;
   }
 
@@ -317,13 +318,13 @@ button.CardDataAccept {
   }
 
   .CardsPosition .cardBackSite {
-    background: url("images/bg-card-back.png") no-repeat;
+    background: url("./images/bg-card-back.png") no-repeat;
     background-size: 100% 100%;
     color: var(--White);
-    left: 20%;
+    left: 15%;
     position: absolute;
-    top: 25%;
-    width: calc(447px / 1.5);
+    top: 10%;
+    width: 20rem;
   }
 
   .cardFrontNumber {
@@ -342,7 +343,8 @@ button.CardDataAccept {
 
   body .CardData {
     width: 100%;
-    height: 60vh;
+    margin-top: 30px;
+    height: 570px;
   }
 
   body .CardData input[class="CardData--CardholderName"],
