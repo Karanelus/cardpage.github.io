@@ -290,7 +290,6 @@ button.CardDataAccept {
     background: url("./images/bg-main-mobile.png") no-repeat 0 0;
     background-size: 100vw 40vh;
     overflow: hidden;
-    min-height: 100vh;
     overflow-y: hidden;
   }
 
